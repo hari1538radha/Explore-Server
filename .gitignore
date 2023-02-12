@@ -1,0 +1,7 @@
+node_modules/
+
+
+PORT = 5000
+DB_Password = $Sriram2002.
+DB_UserName = sriram
+DB_NAME = Explore

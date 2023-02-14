@@ -15,13 +15,12 @@ const uploadSchema = new mongoose.Schema(
       requried: true,
     },
     placeImage: {
-      data: Buffer,
-      contentType: String,
+      type: String,
+      required: true,
     },
-    cardId :
-    {
-        type : String,
-    }
+    cardId: {
+      type: String,
+    },
   },
   { timestamps: true }
 );

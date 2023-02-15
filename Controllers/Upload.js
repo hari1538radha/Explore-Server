@@ -2,12 +2,7 @@
 import { uploadModel } from "../Schema/UploadSchema.js";
 
 export const uploadData = (req, res) => {
-  console.log(req.body);
-  upload(req, res, (err) => {
-    if (err) {
-      // res.send("there is an when uploading data");
-      console.log(err);
-    } else {
+  
       // const addImage = new uploadModel(req.body);
       const addImage = new uploadModel({
         placeName: req.body.placeName,
@@ -25,5 +20,3 @@ export const uploadData = (req, res) => {
         });
       });
     }
-  });
-};

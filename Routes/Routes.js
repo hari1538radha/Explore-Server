@@ -8,7 +8,7 @@ import { searchData } from "../Controllers/Search.js";
 const Route = express.Router();
 
 Route.post("/signup", signup);
-Route.get("/login", login);
+Route.post("/login", login);
 Route.post("/upload", uploadData);
 Route.get("/search", searchData);
 Route.get("/home", home);

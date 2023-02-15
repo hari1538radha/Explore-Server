@@ -4,11 +4,11 @@ import bcrypt from "bcrypt";
 export const login = async (req, res) => {
   const data = req.body;
   console.log(req.body)
-  const user = await signupModel.findOne({ userEmail: body.userEmail });
+  const user = await signupModel.findOne({ userEmail: data.userEmail });
   console.log(user)
   if (user) {
     const validPassword = await bcrypt.compare(
-      body.userPassword,
+      data.userPassword,
       user.userPassword
     );
     if (validPassword) {

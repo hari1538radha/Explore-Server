@@ -2,7 +2,7 @@ import { uploadModel } from "../Schema/UploadSchema.js";
 
 export const searchedDetails = (req, res) => {
   const body = req.query;
-  const details = uploadModel.findOne({ id: body.id }, (err, data) => {
+  const details = uploadModel.findOne({ _id: body.id }, (err, data) => {
     if (err) {
       res.send({
         status: 400,
@@ -11,7 +11,6 @@ export const searchedDetails = (req, res) => {
     } else {
       res.send({
         status: 200,
-
         data,
       });
     }
